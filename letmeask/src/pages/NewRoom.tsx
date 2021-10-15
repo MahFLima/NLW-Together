@@ -18,7 +18,7 @@ export function NewRoom() {
   async function handleCreateRoom(event: FormEvent) {
     event.preventDefault();
 
-    if(newRoom.trim() === ""){
+    if (newRoom.trim() === "") {
       return;
     }
 
@@ -29,7 +29,7 @@ export function NewRoom() {
       authorId: user?.id
     })
 
-    history.push(`/room/${firebaseRoom.key}`)
+    history.push(`/rooms/${firebaseRoom.key}`)
   }
 
   return (
